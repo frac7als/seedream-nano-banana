@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Image Compositor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-accent': '#D1D5DB', // Was #9CA3AF
+              'brand-accent-hover': '#9CA3AF', // Was #6B7280
+              'brand-accent-active': '#6B7280', // Was #4B5563
+              'brand-dark': '#101010',
+              'brand-panel': '#1F2937',
+              'brand-surface': '#374151',
+              'brand-border': '#4B5563',
+              'brand-light-gray': '#D1D5DB',
+              'brand-text': '#F9FAFB',
+              // Active Tab Colors
+              'brand-blue': '#2563EB',
+              'brand-red': '#DC2626',
+              'brand-light-blue': '#38BDF8',
+              'brand-pink': '#EC4899',
+              // Inactive Tab Colors (Corrected Shades)
+              'brand-blue-dark': '#1E40AF',
+              'brand-red-dark': '#991B1B',
+              'brand-light-blue-dark': '#0284C7',
+              'brand-pink-dark': '#DB2777',
+              // Refined Gold Theme (More Amber, Less Brown)
+              'brand-gold-dark': '#92400E',
+              'brand-gold-dark-hover': '#78350F',
+              'brand-gold': '#D97706',
+              'brand-gold-hover': '#B45309',
+              'brand-gold-light': '#FBBF24',
+              'brand-gold-light-hover': '#F59E0B',
+            },
+            animation: {
+              'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            boxShadow: {
+              'glow-red': '0 0 20px 7px rgba(220, 38, 38, 0.7)',
+              'glow-blue': '0 0 20px 7px rgba(37, 99, 235, 0.7)',
+              'glow-pink': '0 0 20px 7px rgba(236, 72, 153, 0.7)',
+              'glow-light-blue': '0 0 20px 7px rgba(56, 189, 248, 0.7)',
+              'glow-yellow': '0 0 20px 7px rgba(251, 191, 36, 0.7)',
+              'glow-white': '0 0 15px 4px rgba(255, 255, 255, 0.4)',
+            }
+          },
+        },
+      }
+    </script>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.11.11/html-to-image.min.js"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.19.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-brand-dark text-brand-text antialiased">
+    <div id="root"></div>
+  </body>
+</html>

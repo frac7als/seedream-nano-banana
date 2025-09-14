@@ -1,0 +1,5 @@
+{
+  "name": "Copy of ASI Image Compositor",
+  "description": "A tool to create composite images by arranging uploaded photos on a canvas. You can then export the collage or send it directly to an AI image model like Nano-Banana for creative generation.",
+  "requestFramePermissions": []
+}
